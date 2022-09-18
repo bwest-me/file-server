@@ -13,42 +13,35 @@ It's using some very popular technology like:
 * Embedded MongoDB 2.0.2
 * Gradle 4.5.1
 
-基于 MongoDB 的文件服务器。MongoDB File Server 致力于小型文件的存储，比如博客中图片、普通文档等。由于MongoDB 支持多种数据格式的存储，对于二进制的存储自然也是不话下，所以可以很方便的用于存储文件。由于  MongoDB 的 BSON 文档对于数据量大小的限制（每个文档不超过16M），所以本文件服务器主要针对的是小型文件的存储。对于大型文件的存储（比如超过16M），MongoDB 官方已经提供了成熟的产品  [GridFS](https://docs.mongodb.com/manual/core/gridfs/)，读者朋友可以自行了解。
-
-本文不会对 MongoDB 的概念、基本用法做过多的介绍，有兴趣的朋友可自行查阅其他文献，比如，笔者所著的[《分布式系统常用技术及案例分析》](https://github.com/waylau/distributed-systems-technologies-and-cases-analysis)一书，对 MongoDB 方面也有所着墨。 
-
-
 ## Features 特性
 
 * Easy to use.（易于使用）
 * RESTful API.
-* Chinese characters friendly.（中文友好）
+* Chinese characters friendly.
 * ...
 
 ## APIs
 
 Here are useful APIs.
 
-* GET  /files/{pageIndex}/{pageSize} : Paging query file list.(分页查询文件列表)
-* GET  /files/{id} : Download file.(下载某个文件)
-* GET  /view/{id} : View file online.(在线预览某个文件。比如，显示图片)
-* POST /upload : Upload file.(上传文件)
-* DELETE /{id} : Delete file.(删除文件)
+* GET  /files/{pageIndex}/{pageSize} : Paging query file list.
+* GET  /files/{id} : Download file.
+* GET  /view/{id} : View file online.
+* POST /upload : Upload file.
+* DELETE /{id} : Delete file.
 
 
-## How to （如何使用）
+## How to 
 
 It's so easy to start up the MongoDB File Server with 2 steps.
 
-只需要两步。
-
-### 1. Get source（获取源码）
+### 1. Get source
 
 ```shell
 $ git clone https://github.com/waylau/mongodb-file-server.git
 ```
 
-### 2. Run（运行）
+### 2. Run
 
 ```shell
 $ gradlew bootRun
@@ -56,7 +49,7 @@ $ gradlew bootRun
 
 then, you can visit the application at <http://localhost:8081>.
 
-## Configuration （配置）
+## Configuration
 
 
 The default configuration is （默认配置如下） :
